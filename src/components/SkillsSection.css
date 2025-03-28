@@ -1,21 +1,78 @@
-/*
+
 .skills-section {
-    padding: 50px;
-    background-color: #f9f9f9;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+.skills-title {
+  font-size: 2rem;
+  color: #00bfff;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
-.skill-box {
-    border: 1px solid #ddd;
-    padding: 16px;
-    background-color: #fff;
-    border-radius: 8px;
-    width: 200px;
+.skills-container {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  align-items: center;
 }
-*/
+
+.skills-scroll-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.skills-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.skills-tile {
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.skills-tile:hover {
+  transform: translateY(-5px);
+}
+
+.skills-tile h3 {
+  color: #00bfff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.skills-tile ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skills-tile ul li {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  color: #cccccc;
+}

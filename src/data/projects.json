@@ -1,10 +1,14 @@
 [
-    {
-        "title": "AI-Powered Timetable Management",
-        "description": "An AI-driven scheduling system that automates timetable creation and reduces workload by 40%."
-    },
-    {
-        "title": "Bank Management System",
-        "description": "A Python-based banking application with automation that reduced manual errors by 70%."
-    }
+  {
+    "title": "AI Image Caption Generator",
+    "description": "Built using Hugging Face\u2019s BLIP model with 90%+ accuracy. Streamlit interface for image upload and caption display. Latency reduced by 50% with caching and model loading."
+  },
+  {
+    "title": "Resume Parser using NLP",
+    "description": "Python parser using spaCy, PyMuPDF, and docx2txt with high-precision regex and NLP-based entity recognition. Supports batch parsing for faster screening."
+  },
+  {
+    "title": "Time Table Management using A.I",
+    "description": "AI-based scheduling system with AngularJS, MySQL. Uses ML to optimize resource allocation and reduce conflicts. Saved 5+ hours weekly in manual planning."
+  }
 ]

@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import profilePic from "./assets/profile.jpg";
-import projects from "./data/projects.json";
 import ContactForm from "./components/ContactForm";
 import AnimatedBlob from "./components/AnimatedBlob";
 import InteractiveCursor from "./components/InteractiveCursor";
@@ -10,6 +9,7 @@ import SkillsSection from "./components/SkillsSection";
 import EducationSection from "./components/EducationSection";
 import ExperienceSection from "./components/ExperienceSection";
 import "./App.css";
+import ProjectsSection from "./components/ProjectsSection";
 
 const sections = ["Home", "Projects", "Skills", "Experience", "Education", "Contact"];
 
@@ -19,7 +19,7 @@ function App() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY + window.innerHeight / 3;
-            const sectionElements = document.querySelectorAll("section");
+            const sectionElements = document.querySelectorAll("#Home, #Projects, #Skills, #Experience, #Education, #Contact");
             sectionElements.forEach((section) => {
                 if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
                     setActiveSection(section.getAttribute("id"));
@@ -62,24 +62,14 @@ function App() {
                 </div>
             </section>
 
-            <section id="Projects">
-                <h2>Projects</h2>
-                <div className="project-grid">
-                    {projects.map((project, index) => (
-                        <div className="project-card" key={index}>
-                            <h3>{project.title}</h3>
-                            <p>{project.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            
 
-            <section id="Skills">
-                <SkillsSection />
-            </section>
+            
 
             <section id="Experience">
-                <ExperienceSection />
+                <ProjectsSection />
+      <SkillsSection />
+      <ExperienceSection />
             </section>
 
             <section id="Education">
@@ -89,7 +79,15 @@ function App() {
             <section id="Contact">
                 <ContactForm />
             </section>
-        </div>
+        
+      
+
+
+
+
+
+
+</div>
     );
 }
 

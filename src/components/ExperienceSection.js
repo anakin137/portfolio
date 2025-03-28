@@ -23,7 +23,7 @@ const ExperienceSection = () => {
     }, []);
 
     return (
-        <section id="experience" className="experience-section" ref={sectionRef}>
+        <section id="Experience" className="experience-section" ref={sectionRef}>
             <h2>Experience</h2>
             <div className="experience-item">
                 <h3>Software Engineer - CATS GLOBAL</h3>

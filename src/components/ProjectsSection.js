@@ -1,42 +1,27 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './ProjectsSection.css';
 
 const ProjectsSection = () => {
-    const sectionRef = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    sectionRef.current.classList.add('fade-in');
-                }
-            },
-            { threshold: 0.3 }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => observer.disconnect();
-    }, []);
-
-    return (
-        <section id="projects" className="projects-section" ref={sectionRef}>
-            <h2>Projects</h2>
-            <div className="project-grid">
-                <div className="project-box">
-                    <h3>AI Timetable Management</h3>
-                    <p>Built with HTML, CSS, AngularJS, and MySQL. Automated scheduling reduced conflicts, saved 5+ hours weekly.</p>
-                </div>
-                <div className="project-box">
-                    <h3>Bank Management System</h3>
-                    <p>Developed in Python. Automated account setup, reducing errors by 70%, and enhanced data retrieval speed by 30%.</p>
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <section id="Projects" className="projects-section">
+      <h2 className="projects-title">Projects</h2>
+      <div className="projects-grid">
+        <div className="project-card" data-aos="fade-up">
+          <h3>AI Image Caption Generator</h3>
+          <p>An app that generates natural language captions for images using deep learning.</p>
+        </div>
+        <div className="project-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Resume Parser using NLP</h3>
+          <p>A tool that extracts structured data from resumes using natural language processing.</p>
+        </div>
+        <div className="project-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Time Table Management using A.I</h3>
+          <p>A system that automates academic timetable creation with AI-based scheduling.</p>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ProjectsSection;
